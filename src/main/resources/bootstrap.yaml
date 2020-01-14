@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+logging.level:
+  org.hibernate.SQL: DEBUG
+  org.springframework.web: DEBUG
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/forex_ntthuat
+    username: postgres
+    password: postgres
+    jpa.show-sql: true
+
+  application:
+    name: forex-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
